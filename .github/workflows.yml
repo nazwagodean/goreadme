@@ -1,8 +1,0 @@
-jobs:
-  build:
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: nazwagodean/say-hello@v1
-      with: 
-        name: nazwagodean
