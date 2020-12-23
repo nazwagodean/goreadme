@@ -1,0 +1,13 @@
+jobs:
+  build:
+    container:
+      image: octocat/ci-image:latest
+      credentials:
+        username: nazwagodean
+        password: ${{ secrets.docker_hub_password}}
+    services:
+      db:
+        image:  ghcr.io/octocat/testdb:latest
+        credentials:
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.ghcr_password }}
